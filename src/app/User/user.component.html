@@ -1,0 +1,48 @@
+<div style="margin-top:100px">
+
+    <div class="input-group form-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-search"></i></span>
+            </div>
+            <input type="text" id="searc" name="nameFilter" placeholder="Name/Category/author.." [(ngModel)]='searchText'/>
+        </div>
+    
+    <br>
+    
+    <div class="container" style="display: flexbox">
+            <div class="d-flex justify-content-center" >
+                <div class="card bg-light " style="width:100%">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-center" >
+                            <span><h3>Books List</h3></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-4 " *ngFor= 'let n of books |searchFilter: searchText : ["bname","category","author"]| paginate:{ itemsPerPage: 6, currentPage: p }'>
+                        <div class="card" style="display: flex;flex-wrap: wrap;">
+                            <div class="card-header text-center bg-warning" >
+                    
+                                <h4><span style="word-break: keep-all">{{n.bname}} </span></h4>
+                            </div>
+                            <div class="card-body ">
+                            
+                              <ul class="list-group list-group-flush " style="display: flex;flex-wrap: wrap;">
+                                <li  class="list-group-item bg-light">  <h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Category: </h6>{{n.category}}</li>
+                                <li  class="list-group-item bg-light"><h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Author: </h6>{{n.author}}</li>
+                                <li  class="list-group-item bg-light"><h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Price: </h6>{{n.price}}</li>
+                          
+                            </ul>
+                            <div class="container-fluid" style="display: inline;">
+                                    
+                                            <div *ngIf="check(n.bname)" ><button class="btn btn-info "   (click)="unSubscribee(n.id)">UnSubscribe</button></div>
+                                            <div *ngIf="!check(n.bname)" ><button class="btn btn-info "  [disabled]="n.quantity == 0 ? true : false" (click)="subscribee(n.id)">Subscribe</button>   </div>
+     
+                        </div>
+                            </div>
+                          </div>
+                          </div>
+                            </div>
+                             <div class="card-footer bg-light " ><pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls></div>
+    </div>
+    </div></div>
+    </div>

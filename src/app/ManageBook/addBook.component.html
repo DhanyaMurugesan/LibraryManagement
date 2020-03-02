@@ -1,0 +1,39 @@
+
+    <div class="container" style="margin-top:100px">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card" style="width: 500px;">
+                <div class="card-header">
+                    
+                    <div class="d-flex justify-content-center">
+                        <span><h3>Add Book</h3></span>
+                    </div>
+                </div>
+            <div class="card-body">
+            <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)" ngNativeValidate>
+            <div>
+                Book Name <input class="form-control" name="bname" type="text" [(ngModel)]="bname" required>
+                 </div>
+    
+            <div >Category <select class="form-control" name="cat" [(ngModel)]="cat" required>
+                <option *ngFor="let n of categ" value={{n.cname}}>{{n.cname}}</option>
+              </select>
+                </div> 
+            <div>Author 
+                    <input class="form-control" type="text" name="auth" [(ngModel)]="auth" required>
+            </div> 
+            <div >Price
+                <input class="form-control" type="number" name="prc" [(ngModel)]="prc" required>
+            </div> <!-- form-group// -->
+            <div> Quantity 
+                <input class="form-control" type="number" name="quan"  [(ngModel)]="quan" required>
+            </div> <!-- form-group// -->                                      
+           
+            <input type="button" class="btn" id="bck" style="width: 100px;" (click)="goBack()" value=Back>
+            <button type="submit" class="btn float-right" style="width: 100px;" > Add </button>
+                                                                                
+        </form>
+    </div>
+       </div>
+       </div>
+</div>
+

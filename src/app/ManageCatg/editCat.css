@@ -1,0 +1,17 @@
+.card{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    border-radius: 1rem;
+    background-color: rgba(0,0,0,0.5) !important;
+    }
+    
+    div {
+      color: white;
+      }
+
+    .btn{
+        color: black;
+        background-color: #FFC312;
+    margin-top:40px
+        }

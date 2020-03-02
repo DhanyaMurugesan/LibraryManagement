@@ -1,0 +1,27 @@
+
+    <div class="container" style="margin-top:100px">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card" style="width: 500px;">
+                <div class="card-header">
+                    
+                    <div class="d-flex justify-content-center">
+                        <span><h3>Edit Category</h3></span>
+                
+                    </div>
+                </div>
+            <div class="card-body">
+            <form >
+            <div>
+                Category Name <input class="form-control" name="cname" type="text" [(ngModel)]="cname" required>
+                 </div>
+    
+            
+                    <input type="button" id="bck" class="btn" style="width: 100px;" (click)="goBack()" value=Back>
+                <button type="submit" class="btn float-right" (click)='updateCat()'style="width: 100px;"> Save  </button>
+                                                                               
+        </form>
+     
+       </div>
+       </div>
+</div>
+</div>

@@ -1,0 +1,32 @@
+
+
+.card {
+    border: 0;
+    border-radius: 1rem;
+    width: 400px;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(0,0,0,0.5) !important;
+  }
+  
+  .input-group-prepend span{
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+    }
+
+    .btn{
+        color: black;
+        background-color: #FFC312;
+    
+        }
+        
+    .btn:hover{
+        color: black;
+        background-color: white;
+        }
+        
+div{color:white;
+}
+a{color:#FFC312
+}

@@ -1,0 +1,53 @@
+
+<div class="container" style="margin-top:100px">
+    <div class="input-group form-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" id="searc" name="nameFilter" placeholder="Name/Category/author.." [(ngModel)]='searchText'/>
+      <div style="text-align: right;"><input type="button" class="btn" id="bck" style="width: 100px;" (click)="goBack()" value=Back></div>  
+    </div>
+
+
+    <div class="container" style="display: flexbox">
+        <div class="d-flex justify-content-center" >
+            <div class="card bg-light " style="width:100%">
+                <div class="card-header">
+                    <div class="d-flex justify-content-center" >
+                        <span><h3>Manage Books</h3></span>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-4 " *ngFor= 'let n of books |searchFilter: searchText : ["bname","category","author"]| paginate:{ itemsPerPage: 6, currentPage: p }'>
+                    <div class="card" style="display: flex;flex-wrap: wrap;">
+                        <div class="card-header text-center bg-warning" >
+                
+                            <h4><span style="word-break: keep-all">{{n.bname}} </span></h4>
+                        </div>
+                        <div class="card-body ">
+                        
+                          <ul class="list-group list-group-flush " style="display: flex;flex-wrap: wrap;">
+                            <li  class="list-group-item bg-light"><h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Id: </h6>{{n.id}}</li>
+                            <li  class="list-group-item bg-light">  <h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Category: </h6>{{n.category}}</li>
+                            <li  class="list-group-item bg-light"><h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Author: </h6>{{n.author}}</li>
+                            <li  class="list-group-item bg-light"><h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Price: </h6>{{n.price}}</li>
+                            <li  class="list-group-item bg-light"><h6 class="card-subtitle mb-2 text-muted" style="word-break: keep-all">Quantity: </h6>{{n.quantity}}</li>
+                      
+                        </ul>
+                        <div class="container-fluid" style="display: inline;">
+                            <div class="row justify-content-center">     
+                            <p data-toggle="tooltip" title="Edit"><button class="btn btn-xs bg-warning"><a routerLink="{{n.id}}"><span class="fas fa-pencil-alt"></span></a></button></p>
+                            <p data-toggle="tooltip" title="Delete"><button class="btn btn-xs  bg-warning" (click)="delete(n.id)"><span class="fas fa-trash-alt"></span></button></p>
+ </div>
+                    </div>
+                        </div>
+                      </div>
+                      </div>
+                        </div>
+                         <div class="card-footer bg-light " ><pagination-controls (pageChange)="p = $event" class="float-right"></pagination-controls></div>
+</div>
+</div>
+</div>
+</div>
+
+

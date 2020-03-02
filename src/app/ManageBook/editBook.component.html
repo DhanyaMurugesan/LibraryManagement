@@ -1,0 +1,39 @@
+
+    <div class="container" style="margin-top:100px">
+        <div class="d-flex justify-content-center h-100">
+            <div class="card" style="width: 500px;">
+                <div class="card-header">
+                    
+                    <div class="d-flex justify-content-center">
+                        <span><h3>Edit Book</h3></span>
+                
+                    </div>
+                </div>
+            <div class="card-body">
+            <form >
+            <div>
+                Book Name <input class="form-control" name="bname" type="text" [(ngModel)]="bname" required>
+                 </div>
+    
+            <div >Category <input class="form-control" name="cat" type="text-area" [(ngModel)]="cat" required>
+                </div> 
+            <div>Author
+                    <input class="form-control" type="text" name="author" [(ngModel)]="author" required>
+            </div> 
+            <div >Price
+                <input class="form-control" type="text" name="price" [(ngModel)]="price" required>
+            </div> <!-- form-group// -->
+            <div > Quantity 
+                <input class="form-control" type="number" name="quan" [(ngModel)]="quan" required>
+            </div> <!-- form-group// -->                                      
+           
+            
+                    <input type="button" id="bck" class="btn" style="width: 100px;" (click)="goBack()" value=Back>
+                <button type="submit" class="btn float-right" (click)='updateBook()'style="width: 100px;"> Save  </button>
+                                                                              
+        </form>
+     </div>
+       </div>
+       </div>
+</div>
+

@@ -1,0 +1,44 @@
+{
+  "register": [
+    {
+      "email": "dhanya.m@gmail.com",
+      "fname": "Dhanya",
+      "lname": "Murugesan",
+      "location": "Bangalore",
+      "mobile": 7338634013,
+      "utype": "admin",
+      "id": 1,
+      "password": "password2"
+    },
+    {
+      "email": "sowndharya.m@gmail.com",
+      "fname": "Sowndharya",
+      "lname": "Murugesan",
+      "location": "Chennai",
+      "mobile": 7200921003,
+      "id": 2,
+      "utype": "user",
+      "password": "password"
+    },
+    {
+      "email": "dhanya.murugesan@wipro.com",
+      "fname": "Dhanya",
+      "lname": "Murugesan",
+      "location": "Om Sai Ram PG for Ladies",
+      "mobile": "8940216888",
+      "password": "password",
+      "utype": "user",
+      "id": 3
+    },
+    {
+      "email": "sahana@gmail.com",
+      "fname": "Sahana",
+      "lname": "Siva",
+      "location": "Om Sai Ram PG for Ladies",
+      "mobile": "8940216888",
+      "password": "password",
+      "utype": "user",
+      "id": 4
+    }
+  ]
+}

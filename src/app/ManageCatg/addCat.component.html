@@ -1,0 +1,26 @@
+
+    <div class="container d-flex justify-content-center h-100" style="margin-top:100px">
+        
+            <div class="card" style="width: 500px;">
+                <div class="card-header">
+                    
+                    <div class="d-flex justify-content-center">
+                        <span><h3>Add Category</h3></span>
+                    </div>
+                </div>
+            <div class="card-body">
+            <form ngNativeValidate>
+            <div class="d-flex justify-content-center">
+                Category Name <input id="cname" name="cname" type="text" [(ngModel)]="cname" required>
+                 </div>
+                    <input type="button" class="btn" id="bck" style="width: 100px;" (click)="goBack()" value=Back>
+                    <input type="button" class="btn float-right" id="add" style="width: 100px;" (click)="Add()" value=Add>
+                
+                                                                               
+        </form>
+     
+       </div>
+       </div>
+</div>
+
+

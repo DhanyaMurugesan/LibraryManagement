@@ -1,0 +1,46 @@
+
+<div class="container" style="display: flexbox;margin-top:100px">
+    
+        <div class="card bg-light " style="width:100%">
+            <div class="card-header">
+                <div class="d-flex justify-content-center" >
+                    <span><h3>Dashboard</h3></span>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-4 " *ngFor="let n of titles">
+                <div class="card" style="display: flex;flex-wrap: wrap;">
+                    <div class="card-header text-center bg-warning" >
+                        
+                        <h4><span>{{n.division}} </span></h4>
+                        <h1><span class={{n.image}}></span></h1>
+                    </div>
+                    <div class="card-body">
+                    <div class="container-fluid" style="display: inline;">
+                            <div class="row">
+                                <div class="col-8" ><button class="btn bg-warning"><a routerLink="/{{n.division}}/manage">Manage</a></button>   </div>
+                                    <div class="col-4 " > <p data-toggle="tooltip" title="Add"><button class="btn btn-xs bg-warning"><a routerLink="/{{n.division}}"><span class="fas fa-plus"></span></a></button></p></div>
+                                   
+                            </div>
+                            
+                    </div></div>
+                  </div></div>
+                  <div class="col-md-4" style="margin-top: 20px;">
+                    <div class="card-header text-center bg-warning" >
+                      <h4><span>Issued Books </span></h4>
+                      <h1><span class="fa fa-book"></span></h1>
+                  </div>
+                  <div class="card-body" style="height:143px">
+                  <div class="container-fluid" style="display: inline;">
+                       
+                              <div class="text-center"><button class="btn bg-warning"><a routerLink="issuedBook">View</a></button>   </div>
+                               
+                  </div></div></div>
+
+  </div>
+  
+  
+</div></div>
+  
+  
+  

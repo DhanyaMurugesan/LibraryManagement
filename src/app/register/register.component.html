@@ -1,0 +1,79 @@
+
+        <br><br><br>
+        <div class="container">
+            <div class="d-flex justify-content-center">
+<div class="card">
+    <div class="d-flex justify-content-center" style="color:green;background-color: ivory" *ngIf='disabled'>Registered Successfully</div><br>
+    <div class="d-flex justify-content-center" style="color:red" *ngIf='confirmpassword'>Password & Confirm Password does not match</div>  
+    <div class="card-body" >
+            <div class="card-header">
+				
+				<div class="d-flex justify-content-center">
+					<span><h3>Sign Up</h3></span>
+			
+				</div>
+			</div>
+            <form id="frm" ngNativeValidate>
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                 </div>
+                <input class="form-control" placeholder="First name" type="text" (input)='ftname=$event.target.value' required>
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                     </div>
+                    <input class="form-control" placeholder="Last name" type="text" (input)='ltname=$event.target.value' required>
+                </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                     </div>
+                    <input class="form-control" placeholder="Email address" type="email" (input)='mailid=$event.target.value' required>
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input class="form-control" placeholder="Create password" type="password" (input)='pwd=$event.target.value' required>
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                <input class="form-control" placeholder="Repeat password" type="password" (input)='pwd1=$event.target.value' required>
+            </div> <!-- form-group// -->                                      
+           
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                </div>
+                
+                <input name="" class="form-control" placeholder="10 digit mobile number" type="tel" (input)='mob=$event.target.value' pattern="[0-9]{10}" required>
+            </div> <!-- form-group// -->
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+                </div>
+                <input class="form-control" placeholder="Address" type="text" (input)='loc=$event.target.value' required>
+            </div> <!-- form-group end.// -->
+            <div class="input-group form-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fa fa-user-circle"></i></span>
+                </div>
+                
+                <select class="form-control" id="sel1" (input)='typee=$event.target.value'>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-block" (click)='addUser()'> Create Account  </button>
+            </div> <!-- form-group// -->      
+            <p class="text-center">Have an account? <a [routerLink]="['/login']">Log In</a> </p>                                                                 
+        </form>
+    </div>
+       
+        </div></div></div>

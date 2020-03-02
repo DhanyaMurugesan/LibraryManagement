@@ -1,0 +1,42 @@
+
+<div class="container" style="display: flexbox;margin-top:100px">
+    
+    <div class="card bg-light " style="width:100%">
+       
+        <div class="card-header">
+            <div class="d-flex justify-content-center" >
+              <h3>Manage Categories</h3>
+            </div>
+        </div>
+       
+        <table class="table table-striped" style="width:600px;margin-left:23%;margin-top: 10px;">
+            <thead>
+              <tr   >
+                <th >Id</th>
+                <th>Category</th>
+                <th>Options</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let n of catg">
+                    <td>{{n.id}}</td>
+                  <td>{{n.cname}}</td>
+                  <td>
+                    <div class="container-fluid" style="display: inline;">
+                        <div class="row">
+                              <p data-toggle="tooltip" title="Edit"><button class="btn btn-xs"><a routerLink="{{n.id}}"><span class="fas fa-pencil-alt"></span></a></button></p>   
+                                <p data-toggle="tooltip" title="Delete"><button class="btn btn-xs" (click)="delete(n.id)"><span class="fas fa-trash-alt"></span></button></p>
+                               
+                        </div>
+                        
+                </div>  </td>
+                 
+                </tr>
+                </tbody>
+                </table>
+                <input type="button" class="btn" id="bck" style="width: 100px;margin:10px;" (click)="goBack()" value=Back>
+              
+        </div></div>
+
+

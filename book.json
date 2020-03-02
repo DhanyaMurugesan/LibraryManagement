@@ -1,0 +1,122 @@
+{
+  "books": [
+    {
+      "bname": "Harry Potter",
+      "category": "Fantasy",
+      "author": "J.k rowling",
+      "price": 120,
+      "quantity": 0,
+      "id": 100,
+      "users": [
+        {
+          "id": 1,
+          "date": "2020-03-01T18:38:13.286Z"
+        },
+        {
+          "id": 2,
+          "date": "2020-03-01T18:38:13.286Z"
+        }
+      ]
+    },
+    {
+      "bname": "C#.Net",
+      "category": "Technology",
+      "author": "John",
+      "quantity": 1,
+      "price": 120,
+      "id": 200,
+      "users": [
+        {
+          "id": 3,
+          "date": "2020-02-02T03:42:55.429Z"
+        },
+        {
+          "id": 4,
+          "date": "2020-03-02T03:55:40.938Z"
+        }
+      ]
+    },
+    {
+      "bname": "To Kill a Mockingbird",
+      "category": "Thriller",
+      "author": "Mark",
+      "quantity": 2,
+      "price": 70,
+      "id": 300,
+      "users": [
+        {
+          "id": 2,
+          "date": "2020-03-01T18:38:13.286Z"
+        }
+      ]
+    },
+    {
+      "bname": "If Tomorrow Comes",
+      "category": "Mystery",
+      "author": "Sydney Sheldon",
+      "quantity": 1,
+      "price": 200,
+      "id": 400,
+      "users": [
+        {
+          "id": 2,
+          "date": "2020-03-01T18:38:13.286Z"
+        }
+      ]
+    },
+    {
+      "bname": "Anne Frank",
+      "category": "Biography",
+      "author": "Anne",
+      "quantity": 5,
+      "price": 30,
+      "id": 500,
+      "users": [
+        {
+          "id": 4,
+          "date": "2020-03-02T03:55:34.641Z"
+        }
+      ]
+    },
+    {
+      "bname": "2 States",
+      "category": "Fantasy",
+      "author": "Chetan Bhagat",
+      "quantity": 1,
+      "price": 100,
+      "id": 6,
+      "users": [
+        {
+          "id": 4,
+          "date": "2020-03-02T03:55:30.196Z"
+        }
+      ]
+    }
+  ],
+  "category": [
+    {
+      "cname": "Adventure",
+      "id": 100
+    },
+    {
+      "cname": "Mystery",
+      "id": 200
+    },
+    {
+      "cname": "Thriller",
+      "id": 300
+    },
+    {
+      "cname": "Fantasy",
+      "id": 400
+    },
+    {
+      "cname": "Horror",
+      "id": 500
+    },
+    {
+      "cname": "Biography",
+      "id": 600
+    }
+  ]
+}

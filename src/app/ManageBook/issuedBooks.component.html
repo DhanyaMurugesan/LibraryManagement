@@ -1,0 +1,32 @@
+
+<div class="container" style="display: flexbox;margin-top:100px">
+    
+    <div class="card bg-light "  style="width:100%">
+        <div class="card-header">
+            <div class="d-flex justify-content-center" >
+                <h3>Issued Books</h3>
+            </div>
+        </div>
+     
+
+        <ng-template #stillLoading><p>Loading...</p></ng-template>
+        <table *ngIf="isloaded; else stillLoading" class="table table-striped" style="width:600px;margin-left:23%;margin-top: 10px;">
+            <thead>
+              <tr>
+                <th scope="col">User Name</th>
+                <th scope="col"> Book Name</th>
+                <th scope="col"> Subscribed Time</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let n of issued">
+                    <td>{{n.uname}}</td>
+                  <td>{{n.bname}}</td>
+                  <td>{{n.time}}</td>
+                </tr>
+                </tbody>
+                </table>
+                <input type="button" class="btn" id="bck" style="width: 100px;margin:10px;" (click)="goBack()" value=Back>
+        </div></div>
+
+

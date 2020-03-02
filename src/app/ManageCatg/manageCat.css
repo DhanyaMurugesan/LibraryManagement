@@ -1,0 +1,11 @@
+thead, .btn{
+    background-color: rgba(0,0,0,0.5)
+}
+p{
+    margin-left:20px;
+    
+}
+
+    span,thead{
+        color: white;
+      }
